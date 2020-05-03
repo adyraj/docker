@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  web:
+    build: .
+    container_name: myweb
+    ports:
+      - '80:8080'
+    networks:
+      mynetwork:
+        aliases:
+          - website
+
+networks:
+  mynetwork:
+
